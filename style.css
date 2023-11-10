@@ -43,13 +43,17 @@ body * {
 }
 
 #container {
-  width: 360px;
+  /*width: 360px;*/
   /*margin-right: auto; Centralizar o container no meio
   margin-left: auto;
   margin-top: 56px;*/
   /*margin: 56px auto 0;*/
   margin: 15px auto 0;
   padding: 0 24px;
+
+  width: 100%;
+max-width: 588px;
+
 }
 
 /* profile */
