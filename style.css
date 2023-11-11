@@ -53,7 +53,7 @@ body * {
   padding: 0 24px;
 
   width: 100%;
-max-width: 588px;
+  max-width: 588px;
 
 }
 
@@ -95,11 +95,18 @@ max-width: 588px;
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
+
+  animation: slide-back 0.4s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color-hover);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  /*right: 0;*/
+  /*left: initial;*/
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -186,7 +193,27 @@ footer {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
 
-    .light{
-      --bg-url: url(./assets/bg-desktop-light.jpg);
-    }
+  .light{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animation*/
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
